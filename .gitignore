@@ -1,0 +1,12 @@
+Release
+bin
+*.pdb
+ipch
+/KHTrainer_dll/x64
+*.obj
+obj
+*.exe
+*.dll
+*.msi
+*.zip
+publish
