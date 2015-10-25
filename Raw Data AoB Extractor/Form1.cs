@@ -212,6 +212,12 @@ namespace Raw_Data_AoB_Extractor
             }
         }
 
+        private void mnemonicConverterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            JavaConverter jc = new JavaConverter(this);
+            jc.Show();
+        }
+
         #region context menu options 
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -695,6 +701,8 @@ namespace Raw_Data_AoB_Extractor
         {
 
         }
+
+        
 
         
 

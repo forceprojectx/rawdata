@@ -99,6 +99,7 @@
     <Compile Include="cheatTable.Designer.cs">
       <DependentUpon>cheatTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Java\JOpCode.cs" />
     <Compile Include="KongHack.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +126,12 @@
     </Compile>
     <Compile Include="rootvar.Designer.cs">
       <DependentUpon>rootvar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JavaConverter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JavaConverter.Designer.cs">
+      <DependentUpon>JavaConverter.cs</DependentUpon>
     </Compile>
     <Compile Include="UnityConverter.cs">
       <SubType>Form</SubType>
@@ -169,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="rootvar.resx">
       <DependentUpon>rootvar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JavaConverter.resx">
+      <DependentUpon>JavaConverter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UnityConverter.resx">
       <DependentUpon>UnityConverter.cs</DependentUpon>

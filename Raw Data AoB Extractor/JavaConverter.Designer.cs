@@ -1,6 +1,6 @@
 ﻿namespace Raw_Data_AoB_Extractor
 {
-    partial class UnityConverter
+    partial class JavaConverter
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JavaConverter));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.tb_data = new System.Windows.Forms.TextBox();
@@ -40,6 +41,7 @@
             this.cb_resolveBranches = new System.Windows.Forms.CheckBox();
             this.cb_autoclose = new System.Windows.Forms.CheckBox();
             this.cb_metadata = new System.Windows.Forms.CheckBox();
+            this.btn_sample = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -49,28 +51,31 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
             this.tableLayoutPanel1.Controls.Add(this.button1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tb_data, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btn_sample, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 145F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(527, 277);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(649, 382);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(420, 3);
+            this.button1.Location = new System.Drawing.Point(505, 3);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 59);
+            this.button1.Size = new System.Drawing.Size(141, 59);
             this.button1.TabIndex = 2;
             this.button1.Text = "Generate Instructions";
             this.button1.UseVisualStyleBackColor = true;
@@ -83,9 +88,9 @@
             this.tb_data.Location = new System.Drawing.Point(3, 3);
             this.tb_data.Multiline = true;
             this.tb_data.Name = "tb_data";
-            this.tableLayoutPanel1.SetRowSpan(this.tb_data, 3);
+            this.tableLayoutPanel1.SetRowSpan(this.tb_data, 5);
             this.tb_data.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tb_data.Size = new System.Drawing.Size(411, 271);
+            this.tb_data.Size = new System.Drawing.Size(496, 376);
             this.tb_data.TabIndex = 3;
             this.tb_data.WordWrap = false;
             this.tb_data.DoubleClick += new System.EventHandler(this.tb_data_DoubleClick);
@@ -114,10 +119,10 @@
             // 
             // button2
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Location = new System.Drawing.Point(420, 85);
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.Location = new System.Drawing.Point(505, 85);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 53);
+            this.button2.Size = new System.Drawing.Size(141, 41);
             this.button2.TabIndex = 4;
             this.button2.Text = "Copy Code To Editor";
             this.button2.UseVisualStyleBackColor = true;
@@ -129,10 +134,10 @@
             this.groupBox1.Controls.Add(this.cb_autoclose);
             this.groupBox1.Controls.Add(this.cb_metadata);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(420, 152);
+            this.groupBox1.Location = new System.Drawing.Point(505, 132);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Size = new System.Drawing.Size(104, 122);
+            this.groupBox1.Size = new System.Drawing.Size(141, 139);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Options";
@@ -140,6 +145,7 @@
             // cb_resolveBranches
             // 
             this.cb_resolveBranches.AutoSize = true;
+            this.cb_resolveBranches.Enabled = false;
             this.cb_resolveBranches.Location = new System.Drawing.Point(0, 84);
             this.cb_resolveBranches.Name = "cb_resolveBranches";
             this.cb_resolveBranches.Size = new System.Drawing.Size(114, 30);
@@ -165,6 +171,7 @@
             this.cb_metadata.AutoSize = true;
             this.cb_metadata.Checked = true;
             this.cb_metadata.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cb_metadata.Enabled = false;
             this.cb_metadata.Location = new System.Drawing.Point(1, 51);
             this.cb_metadata.Margin = new System.Windows.Forms.Padding(0);
             this.cb_metadata.Name = "cb_metadata";
@@ -173,14 +180,26 @@
             this.cb_metadata.Text = "Keep Instruction\r\nMetadata";
             this.cb_metadata.UseVisualStyleBackColor = true;
             // 
-            // UnityConverter
+            // btn_sample
+            // 
+            this.btn_sample.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_sample.Location = new System.Drawing.Point(505, 332);
+            this.btn_sample.Name = "btn_sample";
+            this.btn_sample.Size = new System.Drawing.Size(141, 47);
+            this.btn_sample.TabIndex = 6;
+            this.btn_sample.Text = "View Example";
+            this.btn_sample.UseVisualStyleBackColor = true;
+            this.btn_sample.Click += new System.EventHandler(this.btn_sample_Click);
+            // 
+            // JavaConverter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 277);
+            this.ClientSize = new System.Drawing.Size(649, 382);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "UnityConverter";
-            this.Text = "UnityConverter";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "JavaConverter";
+            this.Text = "Java Converter";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UnityConverter_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -204,5 +223,6 @@
         private System.Windows.Forms.CheckBox cb_autoclose;
         private System.Windows.Forms.CheckBox cb_metadata;
         private System.Windows.Forms.CheckBox cb_resolveBranches;
+        private System.Windows.Forms.Button btn_sample;
     }
 }
