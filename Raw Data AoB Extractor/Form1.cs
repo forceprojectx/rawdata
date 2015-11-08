@@ -175,6 +175,11 @@ namespace Raw_Data_AoB_Extractor
             fourbyte b =new fourbyte();
             b.Show();
         }
+        private void CeByteExtractorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CEAsmConverter ce = new CEAsmConverter(this);
+            ce.Show();
+        }
 
         private void iLDASMBytecodeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -701,6 +706,8 @@ namespace Raw_Data_AoB_Extractor
         {
 
         }
+
+        
 
         
 

@@ -57,8 +57,11 @@
             this.aoBReverserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cheatTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rootVarAddressToolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CeByteExtractorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iLDASMBytecodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.javaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnemonicConverterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.konghackcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.submitHackToDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openWebsiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,8 +69,6 @@
             this.fontSetupToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.syntaxHighlightingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.selectedBytesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.javaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnemonicConverterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -179,7 +180,7 @@
             this.tb_ByteCodeEdit.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_ByteCodeEdit.Location = new System.Drawing.Point(3, 3);
             this.tb_ByteCodeEdit.Name = "tb_ByteCodeEdit";
-            this.tb_ByteCodeEdit.Size = new System.Drawing.Size(281, 206);
+            this.tb_ByteCodeEdit.Size = new System.Drawing.Size(291, 206);
             this.tb_ByteCodeEdit.TabIndex = 2;
             this.tb_ByteCodeEdit.Text = "Edit the codes over here";
             this.tb_ByteCodeEdit.WordWrap = false;
@@ -255,7 +256,7 @@
             this.tb_AoBEdited.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_AoBEdited.Location = new System.Drawing.Point(3, 243);
             this.tb_AoBEdited.Name = "tb_AoBEdited";
-            this.tb_AoBEdited.Size = new System.Drawing.Size(281, 20);
+            this.tb_AoBEdited.Size = new System.Drawing.Size(291, 20);
             this.tb_AoBEdited.TabIndex = 5;
             this.tb_AoBEdited.Click += new System.EventHandler(this.textBox2_Click);
             this.tb_AoBEdited.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -330,7 +331,8 @@
             this.cE4byteCalcToolStripMenuItem,
             this.aoBReverserToolStripMenuItem,
             this.cheatTableToolStripMenuItem,
-            this.rootVarAddressToolToolStripMenuItem});
+            this.rootVarAddressToolToolStripMenuItem,
+            this.CeByteExtractorToolStripMenuItem});
             this.xtrasToolStripMenuItem.Name = "xtrasToolStripMenuItem";
             this.xtrasToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.xtrasToolStripMenuItem.Text = "Tools";
@@ -363,6 +365,13 @@
             this.rootVarAddressToolToolStripMenuItem.Text = "root var address tool";
             this.rootVarAddressToolToolStripMenuItem.Click += new System.EventHandler(this.rootVarAddressToolToolStripMenuItem_Click);
             // 
+            // CeByteExtractorToolStripMenuItem
+            // 
+            this.CeByteExtractorToolStripMenuItem.Name = "CeByteExtractorToolStripMenuItem";
+            this.CeByteExtractorToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.CeByteExtractorToolStripMenuItem.Text = "CE Byte Extractor";
+            this.CeByteExtractorToolStripMenuItem.Click += new System.EventHandler(this.CeByteExtractorToolStripMenuItem_Click);
+            // 
             // unityToolStripMenuItem
             // 
             this.unityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -377,6 +386,21 @@
             this.iLDASMBytecodeToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.iLDASMBytecodeToolStripMenuItem.Text = "IL DASM -> bytecode";
             this.iLDASMBytecodeToolStripMenuItem.Click += new System.EventHandler(this.iLDASMBytecodeToolStripMenuItem_Click);
+            // 
+            // javaToolStripMenuItem
+            // 
+            this.javaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnemonicConverterToolStripMenuItem});
+            this.javaToolStripMenuItem.Name = "javaToolStripMenuItem";
+            this.javaToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.javaToolStripMenuItem.Text = "Java";
+            // 
+            // mnemonicConverterToolStripMenuItem
+            // 
+            this.mnemonicConverterToolStripMenuItem.Name = "mnemonicConverterToolStripMenuItem";
+            this.mnemonicConverterToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.mnemonicConverterToolStripMenuItem.Text = "(JBE) Mnemonic Converter";
+            this.mnemonicConverterToolStripMenuItem.Click += new System.EventHandler(this.mnemonicConverterToolStripMenuItem_Click);
             // 
             // konghackcomToolStripMenuItem
             // 
@@ -432,21 +456,6 @@
             this.selectedBytesToolStripMenuItem.Name = "selectedBytesToolStripMenuItem";
             this.selectedBytesToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
             this.selectedBytesToolStripMenuItem.Text = "Selected Bytes:";
-            // 
-            // javaToolStripMenuItem
-            // 
-            this.javaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnemonicConverterToolStripMenuItem});
-            this.javaToolStripMenuItem.Name = "javaToolStripMenuItem";
-            this.javaToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.javaToolStripMenuItem.Text = "Java";
-            // 
-            // mnemonicConverterToolStripMenuItem
-            // 
-            this.mnemonicConverterToolStripMenuItem.Name = "mnemonicConverterToolStripMenuItem";
-            this.mnemonicConverterToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.mnemonicConverterToolStripMenuItem.Text = "(JBE) Mnemonic Converter";
-            this.mnemonicConverterToolStripMenuItem.Click += new System.EventHandler(this.mnemonicConverterToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -638,7 +647,7 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.splitContainer1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel1.SetColumnSpan(this.splitContainer1, 2);
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -656,7 +665,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel2);
             this.splitContainer1.Size = new System.Drawing.Size(608, 267);
             this.splitContainer1.SplitterDistance = 304;
-            this.splitContainer1.SplitterWidth = 15;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 24;
             // 
             // tableLayoutPanel6
@@ -701,7 +710,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(287, 265);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(297, 265);
             this.tableLayoutPanel2.TabIndex = 20;
             // 
             // Form1
@@ -800,6 +809,7 @@
         private System.Windows.Forms.RadioButton rb_none;
         private System.Windows.Forms.RadioButton rb_BBCODE;
         private System.Windows.Forms.RadioButton rb_html;
+        private System.Windows.Forms.ToolStripMenuItem CeByteExtractorToolStripMenuItem;
     }
 }
 
