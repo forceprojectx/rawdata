@@ -26,14 +26,9 @@ namespace Raw_Data_AoB_Extractor
             populateTable();
         }
 
-        public UnityConverter(Form1 frm)
+        public UnityConverter(Form1 frm):this()
         {
-            InitializeComponent();
             parentForm = frm;
-            cb_autoclose.Checked = Properties.Settings.Default.unity_autoclose;
-            cb_metadata.Checked = Properties.Settings.Default.unity_keepMetadata;
-            cb_resolveBranches.Checked = Properties.Settings.Default.unity_resolveBranches;
-            populateTable();
         }
 
         #region hash table codes
@@ -431,8 +426,11 @@ namespace Raw_Data_AoB_Extractor
             if (cb_autoclose.Checked == true)
             {
                 //copy data to main form and close conversion window
-                ((Form1)parentForm).tb_ByteCodeInput.Text = data;
-                this.Close();
+                if (parentForm != null)
+                {
+                    ((Form1)parentForm).tb_ByteCodeInput.Text = data;
+                    this.Close();
+                }
             }
             else
             {
@@ -564,8 +562,11 @@ namespace Raw_Data_AoB_Extractor
             if (cb_autoclose.Checked == true)
             {
                 //copy data to main form and close conversion window
-                ((Form1)parentForm).tb_ByteCodeInput.Text = data;
-                this.Close();
+                if (parentForm != null)
+                {
+                    ((Form1)parentForm).tb_ByteCodeInput.Text = data;
+                    this.Close();
+                }
             }
             else
             {
@@ -613,7 +614,10 @@ namespace Raw_Data_AoB_Extractor
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ((Form1)parentForm).tb_ByteCodeInput.Text = tb_data.Text;
+            if (parentForm != null)
+            {
+                ((Form1)parentForm).tb_ByteCodeInput.Text = tb_data.Text;
+            }
         }
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
         {

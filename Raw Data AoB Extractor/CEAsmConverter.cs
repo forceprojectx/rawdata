@@ -56,8 +56,11 @@ namespace Raw_Data_AoB_Extractor
                 if (cb_autoclose.Checked == true)
                 {
                     //copy data to main form and close conversion window
-                    ((Form1)parentForm).tb_ByteCodeInput.Text = sb.ToString();
-                    this.Close();
+                    if (parentForm != null)
+                    {
+                        ((Form1)parentForm).tb_ByteCodeInput.Text = sb.ToString();
+                        this.Close();
+                    }
                 }
                 else
                 {
@@ -102,6 +105,14 @@ ESP=0078F498
 EBP=0078F4AC
 EIP=001CA56E
 ";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (parentForm != null)
+            {
+                ((Form1)parentForm).tb_ByteCodeInput.Text = tb_data.Text;
+            }
         }
     }
 }

@@ -143,7 +143,7 @@ namespace Raw_Data_AoB_Extractor
         
         private void button1_Click(object sender, EventArgs e)
         {
-            if (true||webBrowser1.Document.Cookie.Contains("auth"))
+            if (true||webBrowser1.Document.Cookie.Contains("auth"))//intentionally unreachable
             {
                 submitHack();
             }
